@@ -68,8 +68,8 @@ body{
     <h2>🚜 Stockyard</h2>
 
     <div class="menu">
-        <div>Dashboard</div>
-        <div>Equipment</div>
+        <div onclick="showDashboard()">Dashboard</div>
+        <div onclick="showEquipment()">Equipment</div>
         <div>Projects</div>
         <div>Employees</div>
         <div>Deliveries</div>
@@ -77,7 +77,7 @@ body{
 </div>
 
 <div class="main">
-
+<div id="dashboardPage">
 <h1>LOGISTIC STOCKYARD DASHBOARD</h1>
 
 <br>
@@ -105,8 +105,41 @@ body{
 </div>
 
 </div>
-
 </div>
 
+<div id="equipmentPage" style="display:none;">
+
+<h1>EQUIPMENT COST DASHBOARD</h1>
+
+<div class="card">
+    <h3>Total Rental Cost</h3>
+    <h2>SAR 768,393.85</h2>
+</div>
+
+<div class="card">
+    <h3>Top Location</h3>
+    <h2>King Salman Park</h2>
+</div>
+
+<div class="card">
+    <h3>Data Period</h3>
+    <h2>Jan-Aug</h2>
+</div>
+
+</div>
+</div>
+<script>
+
+function showDashboard() {
+    document.getElementById("dashboardPage").style.display = "block";
+    document.getElementById("equipmentPage").style.display = "none";
+}
+
+function showEquipment() {
+    document.getElementById("dashboardPage").style.display = "none";
+    document.getElementById("equipmentPage").style.display = "block";
+}
+
+</script>
 </body>
 </html>
