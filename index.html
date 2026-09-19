@@ -5,81 +5,105 @@
 <title>Logistic Stockyard Dashboard</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-margin:0;
-font-family:Arial,sans-serif;
-display:flex;
-background:#f4f6f9;
+    font-family:Arial,sans-serif;
+    display:flex;
+    background:#f4f6f9;
 }
 
 .sidebar{
-width:250px;
-background:#0d47a1;
-color:white;
-height:100vh;
-padding:20px;
+    width:250px;
+    min-height:100vh;
+    background:#0d47a1;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
 }
 
 .menu div{
-padding:12px;
-margin-bottom:10px;
-background:rgba(255,255,255,0.1);
-border-radius:5px;
+    padding:12px;
+    margin-bottom:10px;
+    background:rgba(255,255,255,0.15);
+    border-radius:5px;
 }
 
 .main{
-flex:1;
-padding:20px;
+    flex:1;
+    padding:20px;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:10px;
-width:220px;
-display:inline-block;
-margin:10px;
-box-shadow:0 2px 5px rgba(0,0,0,.1);
+    background:white;
+    padding:20px;
+    width:220px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.card h2{
+    color:#1565c0;
+    margin-top:10px;
 }
 </style>
 
 </head>
-
 <body>
 
 <div class="sidebar">
-<h2>🚜 Stockyard</h2>
+    <h2>🚜 Stockyard</h2>
 
-<div class="menu">
-<div>Dashboard</div>
-<div>Equipment</div>
-<div>Projects</div>
-<div>Employees</div>
-<div>Deliveries</div>
-</div>
+    <div class="menu">
+        <div>Dashboard</div>
+        <div>Equipment</div>
+        <div>Projects</div>
+        <div>Employees</div>
+        <div>Deliveries</div>
+    </div>
 </div>
 
 <div class="main">
+
 <h1>LOGISTIC STOCKYARD DASHBOARD</h1>
 
+<br>
+
+<div class="cards">
+
 <div class="card">
-<h3>Total Equipment</h3>
-<h2>25</h2>
+    <h3>Total Equipment</h3>
+    <h2>25</h2>
 </div>
 
 <div class="card">
-<h3>Running</h3>
-<h2>18</h2>
+    <h3>Running</h3>
+    <h2>18</h2>
 </div>
 
 <div class="card">
-<h3>Idle</h3>
-<h2>4</h2>
+    <h3>Idle</h3>
+    <h2>4</h2>
 </div>
 
 <div class="card">
-<h3>Breakdown</h3>
-<h2>3</h2>
+    <h3>Breakdown</h3>
+    <h2>3</h2>
+</div>
+
 </div>
 
 </div>
