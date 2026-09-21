@@ -5,167 +5,216 @@
 <title>Logistic Stockyard Dashboard</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    display:flex;
-    background:#f4f6f9;
+font-family:Arial,sans-serif;
+display:flex;
+background:#f1f3f6;
 }
 
 .sidebar{
-    width:250px;
-    min-height:100vh;
-    background:#0d47a1;
-    color:white;
-    padding:20px;
+width:250px;
+background:#0d47a1;
+color:white;
+height:100vh;
+padding:20px;
 }
 
 .sidebar h2{
-    margin-bottom:20px;
+margin-bottom:20px;
 }
 
 .menu div{
-    padding:12px;
-    margin-bottom:10px;
-    background:rgba(255,255,255,0.15);
-    border-radius:5px;
+padding:15px;
+margin-bottom:10px;
+background:rgba(255,255,255,0.15);
+border-radius:5px;
+cursor:pointer;
+}
+
+.menu div:hover{
+background:rgba(255,255,255,0.3);
 }
 
 .main{
-    flex:1;
-    padding:20px;
+flex:1;
+padding:20px;
 }
 
 .cards{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
 .card{
-    background:white;
-    padding:20px;
-    width:220px;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,.1);
+background:white;
+padding:20px;
+width:220px;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
 }
 
 .card h2{
-    color:#1565c0;
-    margin-top:10px;
+color:#1565c0;
+margin-top:10px;
 }
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+margin-top:15px;
+margin-bottom:30px;
+}
+
+th{
+background:#1565c0;
+color:white;
+padding:10px;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+h2{
+margin-top:20px;
+margin-bottom:10px;
+}
+
 </style>
 
 </head>
+
 <body>
 
 <div class="sidebar">
-    <h2>🚜 Stockyard</h2>
 
-    <div class="menu">
-        <div onclick="showDashboard()">Dashboard</div>
-        <div onclick="showEquipment()">Equipment</div>
-       <div onclick="showProjects()">Projects</div>
-        <div>Employees</div>
-        <div>Deliveries</div>
-    </div>
+<h2>🚜 Stockyard</h2>
+
+<div class="menu">
+<div onclick="showDashboard()">Dashboard</div>
+<div onclick="showEquipment()">Equipment</div>
+<div onclick="showProjects()">Projects</div>
+<div onclick="showEmployees()">Employees</div>
+<div onclick="showDeliveries()">Deliveries</div>
+</div>
+
 </div>
 
 <div class="main">
-<div id="dashboardPage">
-<h1>LOGISTIC STOCKYARD DASHBOARD</h1>
 
-<br>
+<!-- DASHBOARD -->
+
+<div id="dashboardPage">
+
+<h1>LOGISTIC STOCKYARD DASHBOARD</h1>
 
 <div class="cards">
 
 <div class="card">
-    <h3>Total Equipment</h3>
-    <h2>25</h2>
+<h3>Total Equipment</h3>
+<h2>25</h2>
 </div>
 
 <div class="card">
-    <h3>Running</h3>
-    <h2>18</h2>
+<h3>Running</h3>
+<h2>18</h2>
 </div>
 
 <div class="card">
-    <h3>Idle</h3>
-    <h2>4</h2>
+<h3>Idle</h3>
+<h2>4</h2>
 </div>
 
 <div class="card">
-    <h3>Breakdown</h3>
-    <h2>3</h2>
+<h3>Breakdown</h3>
+<h2>3</h2>
 </div>
 
 </div>
+
 </div>
+
+<!-- EQUIPMENT -->
 
 <div id="equipmentPage" style="display:none;">
 
 <h1>EQUIPMENT COST DASHBOARD</h1>
 
+<div class="cards">
+
 <div class="card">
-    <h3>Total Rental Cost</h3>
-    <h2>SAR 768,393.85</h2>
+<h3>Total Rental Cost</h3>
+<h2>SAR 768,393.85</h2>
 </div>
 
 <div class="card">
-    <h3>Top Location</h3>
-    <h2>King Salman Park</h2>
+<h3>Top Location</h3>
+<h2>King Salman Park</h2>
 </div>
 
 <div class="card">
-    <h3>Data Period</h3>
-    <h2>Jan-Aug</h2>
+<h3>Data Period</h3>
+<h2>Jan-Aug</h2>
 </div>
+
+</div>
+
 <h2>Cost Per Location</h2>
 
-<table style="width:100%;background:white;border-collapse:collapse;margin-top:20px;">
+<table>
 
-<tr style="background:#1565c0;color:white;">
-    <th>Location</th>
-    <th>Total Cost</th>
+<tr>
+<th>Location</th>
+<th>Total Cost</th>
 </tr>
 
 <tr>
-    <td>King Salman Park</td>
-    <td>SAR 488,794.23</td>
+<td>King Salman Park</td>
+<td>SAR 488,794.23</td>
 </tr>
 
 <tr>
-    <td>New Area Stockyard Murcia</td>
-    <td>SAR 203,146.92</td>
+<td>New Area Stockyard Murcia</td>
+<td>SAR 203,146.92</td>
 </tr>
 
 <tr>
-    <td>Factory</td>
-    <td>SAR 37,744.23</td>
+<td>Factory</td>
+<td>SAR 37,744.23</td>
 </tr>
 
 <tr>
-    <td>Al Ghoroub</td>
-    <td>SAR 27,477.69</td>
+<td>Al Ghoroub</td>
+<td>SAR 27,477.69</td>
 </tr>
 
 <tr>
-    <td>Al Sadan</td>
-    <td>SAR 11,230.77</td>
+<td>Al Sadan</td>
+<td>SAR 11,230.77</td>
 </tr>
 
-</table><br><br>
+</table>
 
 <h2>Monthly Cost Summary</h2>
 
-<table style="width:100%;background:white;border-collapse:collapse;">
+<table>
 
-<tr style="background:#1565c0;color:white;">
+<tr>
 <th>Month</th>
 <th>Rental Cost</th>
 </tr>
@@ -180,50 +229,12 @@ body{
 <tr><td>August</td><td>SAR 160,000</td></tr>
 
 </table>
-<br><br>
-
-<h2>Monthly Cost Summary</h2>
-
-<table style="width:100%;background:white;border-collapse:collapse;">
-<tr style="background:#1565c0;color:white;">
-<th>Month</th>
-<th>Rental Cost</th>
-</tr>
-
-<tr><td>January</td><td>SAR 145,000</td></tr>
-<tr><td>February</td><td>SAR 132,000</td></tr>
-<tr><td>March</td><td>SAR 128,000</td></tr>
-<tr><td>April</td><td>SAR 136,000</td></tr>
-<tr><td>May</td><td>SAR 142,000</td></tr>
-<tr><td>June</td><td>SAR 150,000</td></tr>
-<tr><td>July</td><td>SAR 155,000</td></tr>
-<tr><td>August</td><td>SAR 160,000</td></tr>
-</table>
-
-<br><br>
 
 <h2>Top Equipment Cost</h2>
 
-<table style="width:100%;background:white;border-collapse:collapse;">
-<tr style="background:#1565c0;color:white;">
-<th>Equipment</th>
-<th>Total Cost</th>
-</tr>
+<table>
 
-<tr><td>Tower Crane</td><td>SAR 250,000</td></tr>
-<tr><td>Mobile Crane 50T</td><td>SAR 180,000</td></tr>
-<tr><td>JCB 17m</td><td>SAR 85,000</td></tr>
-<tr><td>Water Tanker</td><td>SAR 70,000</td></tr>
-<tr><td>Mini Excavator</td><td>SAR 55,000</td></tr>
-<tr><td>Bobcat</td><td>SAR 45,000</td></tr>
-</table>
-<br><br>
-
-<h2>Top Equipment Cost</h2>
-
-<table style="width:100%;background:white;border-collapse:collapse;">
-
-<tr style="background:#1565c0;color:white;">
+<tr>
 <th>Equipment</th>
 <th>Total Cost</th>
 </tr>
@@ -236,29 +247,129 @@ body{
 <tr><td>Bobcat</td><td>SAR 45,000</td></tr>
 
 </table>
+
 </div>
+
+<!-- PROJECTS -->
+
+<div id="projectsPage" style="display:none;">
+
+<h1>PROJECT COST DASHBOARD</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Top Project</h3>
+<h2>King Salman Park</h2>
 </div>
+
+<div class="card">
+<h3>Total Projects</h3>
+<h2>5</h2>
+</div>
+
+</div>
+
+<table>
+
+<tr>
+<th>Project</th>
+<th>Total Cost</th>
+</tr>
+
+<tr>
+<td>King Salman Park</td>
+<td>SAR 488,794.23</td>
+</tr>
+
+<tr>
+<td>New Area Stockyard Murcia</td>
+<td>SAR 203,146.92</td>
+</tr>
+
+<tr>
+<td>Factory</td>
+<td>SAR 37,744.23</td>
+</tr>
+
+<tr>
+<td>Al Ghoroub</td>
+<td>SAR 27,477.69</td>
+</tr>
+
+<tr>
+<td>Al Sadan</td>
+<td>SAR 11,230.77</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- EMPLOYEES -->
+
+<div id="employeesPage" style="display:none;">
+
+<h1>EMPLOYEE DASHBOARD</h1>
+
+<div class="card">
+<h3>Total Employees</h3>
+<h2>120</h2>
+</div>
+
+</div>
+
+<!-- DELIVERIES -->
+
+<div id="deliveriesPage" style="display:none;">
+
+<h1>DELIVERY DASHBOARD</h1>
+
+<div class="card">
+<h3>Active Deliveries</h3>
+<h2>15</h2>
+</div>
+
+</div>
+
+</div>
+
 <script>
 
-function showDashboard() {
-    document.getElementById("dashboardPage").style.display = "block";
-    document.getElementById("equipmentPage").style.display = "none";
-    document.getElementById("projectsPage").style.display = "none";
-}
-}
-
-function showEquipment() {
-    document.getElementById("dashboardPage").style.display = "none";
-    document.getElementById("equipmentPage").style.display = "block";
-    document.getElementById("projectsPage").style.display = "none";
-}
+function hideAll(){
+document.getElementById("dashboardPage").style.display="none";
+document.getElementById("equipmentPage").style.display="none";
+document.getElementById("projectsPage").style.display="none";
+document.getElementById("employeesPage").style.display="none";
+document.getElementById("deliveriesPage").style.display="none";
 }
 
-</script>function showProjects() {
-    document.getElementById("dashboardPage").style.display = "none";
-    document.getElementById("equipmentPage").style.display = "none";
-    document.getElementById("projectsPage").style.display = "block";
+function showDashboard(){
+hideAll();
+document.getElementById("dashboardPage").style.display="block";
 }
+
+function showEquipment(){
+hideAll();
+document.getElementById("equipmentPage").style.display="block";
+}
+
+function showProjects(){
+hideAll();
+document.getElementById("projectsPage").style.display="block";
+}
+
+function showEmployees(){
+hideAll();
+document.getElementById("employeesPage").style.display="block";
+}
+
+function showDeliveries(){
+hideAll();
+document.getElementById("deliveriesPage").style.display="block";
+}
+
+</script>
 
 </body>
 </html>
