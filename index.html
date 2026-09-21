@@ -154,7 +154,21 @@ margin-bottom:10px;
 <div id="equipmentPage" style="display:none;">
 
 <h1>EQUIPMENT COST DASHBOARD</h1>
+<div style="margin-bottom:20px;">
 
+<button onclick="showMonth('January')">January</button>
+<button onclick="showMonth('February')">February</button>
+<button onclick="showMonth('March')">March</button>
+<button onclick="showMonth('April')">April</button>
+<button onclick="showMonth('May')">May</button>
+<button onclick="showMonth('June')">June</button>
+<button onclick="showMonth('July')">July</button>
+<button onclick="showMonth('August')">August</button>
+
+</div>
+
+<h2 id="monthTitle">January</h2>
+  
 <div class="cards">
 
 <div class="card">
@@ -367,6 +381,9 @@ document.getElementById("employeesPage").style.display="block";
 function showDeliveries(){
 hideAll();
 document.getElementById("deliveriesPage").style.display="block";
+}
+function showMonth(month){
+    document.getElementById("monthTitle").innerHTML = month;
 }
 
 </script>
