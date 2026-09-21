@@ -70,7 +70,7 @@ body{
     <div class="menu">
         <div onclick="showDashboard()">Dashboard</div>
         <div onclick="showEquipment()">Equipment</div>
-        <div>Projects</div>
+       <div onclick="showProjects()">Projects</div>
         <div>Employees</div>
         <div>Deliveries</div>
     </div>
@@ -243,13 +243,22 @@ body{
 function showDashboard() {
     document.getElementById("dashboardPage").style.display = "block";
     document.getElementById("equipmentPage").style.display = "none";
+    document.getElementById("projectsPage").style.display = "none";
+}
 }
 
 function showEquipment() {
     document.getElementById("dashboardPage").style.display = "none";
     document.getElementById("equipmentPage").style.display = "block";
+    document.getElementById("projectsPage").style.display = "none";
+}
 }
 
-</script>
+</script>function showProjects() {
+    document.getElementById("dashboardPage").style.display = "none";
+    document.getElementById("equipmentPage").style.display = "none";
+    document.getElementById("projectsPage").style.display = "block";
+}
+
 </body>
 </html>
